@@ -1,4 +1,6 @@
 FROM ubuntu:latest as Git
+RUN apt-get update && \
+    apt-get install -y git
 WORKDIR /app
 RUN git clone http://github.com/jishnuk25/vprofile.git
 
