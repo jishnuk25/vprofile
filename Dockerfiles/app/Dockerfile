@@ -2,7 +2,7 @@ FROM ubuntu:latest as Git
 WORKDIR /app
 RUN git clone http://github.com/jishnuk25/vprofile.git
 
-FROM 3.9.2-eclipse-temurin-8-alpine as maven
+FROM maven:3.9.2-eclipse-temurin-8-alpine as maven
 COPY --from=Git /app/vprofile /app
 WORKDIR /app
 RUN mvn clean install
