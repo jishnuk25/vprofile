@@ -20,7 +20,7 @@ spec:
       initContainers:
       - name: waitfordb
         image: busybox
-        command: ['sh', '-c', 'until nslookup db01.vprofile; do echo waiting for database; sleep 2; done;']
+        command: ['sh', '-c', 'until nslookup db01.vprofile.svc.cluster.local; do echo waiting for database; sleep 2; done;']
       - name: waitforcache
         image: busybox
-        command: ['sh', '-c', 'until nslookup mc01.vprofile; do echo waiting for memcached; sleep 2; done;']
+        command: ['sh', '-c', 'until nslookup mc01.vprofile.svc.cluster.local; do echo waiting for memcached; sleep 2; done;']
