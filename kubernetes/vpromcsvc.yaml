@@ -8,5 +8,5 @@ spec:
   ports:
   - port: 11211
     targetPort: vpromc-port
-    type: clusterIP
     protocol: TCP
+  type: ClusterIP
