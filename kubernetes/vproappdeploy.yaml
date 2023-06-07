@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: vproapp
-        image: 25795/vproapp:latest
+        image: 25795/vproapp:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
